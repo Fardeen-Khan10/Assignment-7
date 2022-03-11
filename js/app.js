@@ -151,13 +151,13 @@ const displayLikedPosts = () => {
       document.getElementById( "liked" ).appendChild(div);
   });
 };
-
 const displayReportedPosts = () => {
-    const reportedPosts = getReportedPosts();
-    posts.forEach((post) => {
-        const div = createPost(post);
-        document.getElementById( "reported" ).appendChild(div);
-    });
+  const reportedPosts = getReportedPosts();
+  reportedPosts.forEach((post) => {
+      const div = createPost(post);
+      document.getElementById( "reported" ).innerHTML = '';
+      document.getElementById( "reported" ).appendChild(div);
+  });
 };
 
 const loadPosts = async () =>{
