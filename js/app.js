@@ -144,11 +144,12 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
-    const likedPosts = getLikedPosts();
-    likedPosts.forEach((post) => {
-        const div = createPost(post);
-        document.getElementById( "liked" ).appendChild(div);
-    });
+  const likedPosts = getLikedPosts();
+  likedPosts.forEach((post) => {
+      const div = createPost(post);
+      document.getElementById( "liked" ).innerHTML = '';
+      document.getElementById( "liked" ).appendChild(div);
+  });
 };
 
 const displayReportedPosts = () => {
